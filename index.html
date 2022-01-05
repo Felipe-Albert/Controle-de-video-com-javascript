@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Video</title>
+
+<style>
+    .container {
+        position: relative;
+        width: 640px;
+        height: 360px;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .controle {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        position: relative;
+        width: 50px;
+        padding: 10px;
+        top: 100%; 
+        transform: translateY(-100%);
+    }
+
+</style>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <video id="video1" class="video" src="./assets/Paisagens em movimento_720P HD.mp4" poster="./assets/imagem-fundo.jpg">
+
+        </video>
+
+            <div id="comandos" onmouseover="mostrar(`comandos`)" onmouseout="ocultar(`comandos`)" class="controle">
+
+                <img class="btn" onclick="play()" src="./assets/play.png">
+                <img class="btn" onclick="pause()" src="./assets/pause.png">
+                <img class="btn" onclick="atrasar()" src="./assets/atrasar.png">
+                <img class="btn" onclick="adiantar()" src="./assets/adiantar.png">
+                <img class="btn" onclick="stop()" src="./assets/stop.png">
+
+            </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
